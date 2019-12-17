@@ -20,6 +20,9 @@
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'FrontController@index')->name('index');
+Route::get('/complain', 'FrontController@makecomplain')->name('makecomplain');
+Route::post('/save/complain', 'FrontController@savecomplain')->name('savecomplain');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -54,17 +57,10 @@ if ($timeIt > date('Y-m-d')) {
 
     Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         Route::get('/', 'AdminController@index')->name('dashboard.index');
-        Route::resource('category', 'CategoryController');
-        
-    //     Route::resource('advert', 'AdvertController');
-    //     Route::resource('ministry', 'MinistryController');
-    //     Route::resource('bidding', 'BiddingController');
+        Route::resource('complain', 'ComplainController');
+        Route::resource('staff', 'StaffController');
 
-    //     Route::post('bidding/{id}/activate', 'BiddingController@activate')->name('bidding.activate');
-    // Route::post('bidding/{id}/deactivate', 'BiddingController@deactivate')->name('bidding.deactivate');
-    // Route::get('bidding/contract/{type?}', 'BiddingController@contract');
-        
-       
+
         Route::get('user/profile', 'UserController@profileimage')->name('user.profile');
         Route::post('user/profile', 'UserController@updateprofileimage')->name('user.profile.update');
 
@@ -73,6 +69,3 @@ if ($timeIt > date('Y-m-d')) {
 } else {
     Route::get('/', 'TimerController@calldeveloper');
 }
-
-
-

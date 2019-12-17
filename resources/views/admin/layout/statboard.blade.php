@@ -1,7 +1,7 @@
 @include('admin.layout.statboardcontainer')
 <!-- Small boxes (Stat box) -->
 <section class="content">
-  <div class="row">
+  {{-- <div class="row">
     @if (Auth::user()->role->id==1||Auth::user()->role->id==2)
     <div class="row">
       <div class="col-lg-2 col-xs-6">
@@ -95,6 +95,6 @@
     </div>
 
     @endif
-  </div>
+  </div> --}}
 </section>
 <!-- /.row -->

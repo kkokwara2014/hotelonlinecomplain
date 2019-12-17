@@ -71,9 +71,9 @@
           <div class="col-md-12 text-center">
 
             <div class="mb-5 element-animate">
-              <h1>Welcome To Our Hotel</h1>
+              <h1>Welcome To The Focus Hotel</h1>
               <p>We hope to hear your complain so that we can serve you better</p>
-              <p><a href="#" class="btn btn-primary">Make Complain</a></p>
+            <p><a href="{{route('makecomplain')}}" class="btn btn-primary">Make Complain</a></p>
             </div>
 
           </div>
@@ -241,7 +241,7 @@
           <div class="col-md-4">
             <h3>Phone Support</h3>
             <p>24/7 Call us now.</p>
-            <p class="lead"><a href="tel://">+ 1 332 3093 323</a></p>
+            <p class="lead"><a href="tel://">+234816-096-0141</a></p>
           </div>
           <div class="col-md-4">
             <h3>Connect With Us</h3>

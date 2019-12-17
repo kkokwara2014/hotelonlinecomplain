@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Auth;
+use App\Complain;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+use Auth;
+
+class ComplainController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +18,9 @@ class AdminController extends Controller
     {
         $user = Auth::user();
 
-        $admins=User::where('role_id',1)->get()->count();
+        $complains=Complain::orderBy('created_at','desc')->get();
                
-        return view('admin.index',compact('user','admins'));
+        return view('admin.complain.index',compact('user','complains'));
     }
 
     /**

@@ -1,8 +1,8 @@
 <footer class="main-footer">
   <div class="pull-right hidden-xs">
-    {{-- Powered by Done-Right Systems Inc. --}}
+    Powered by Egwu Fredrick Amaobi - 2017/HND/23285/CS.
   </div>
-  <strong>Copyright &copy; 2019 courseregsys</strong> All rights
+  <strong>Copyright &copy; 2019 hotelonlinecomplain</strong> All rights
   reserved.
 </footer>
 
